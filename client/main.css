@@ -1,0 +1,158 @@
+/* CSS declarations go here */
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Light.woff');
+}
+html { 
+  background: url("images/bg.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.center {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  display: table;
+}
+
+body {
+  font:35px/1.5 'Lato';
+  color:#777;
+  font-weight:300;
+  height:100%;
+  overflow:hidden;
+  width: 100%;
+  margin: 0;
+}
+
+a {
+  color:#f7f7f7;
+  font-weight:400;
+  font-family: 'Lato';
+  text-decoration:none;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate; 
+}
+
+//Divs
+#main {
+}
+#sign-in {
+  background-color: #F7F7FF;
+  border-radius:15px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:18%;
+  margin-bottom:0;
+  height:auto;
+  max-width:600px;
+  box-shadow: 0px 5px 10px #222222;
+  padding-bottom:0;
+  padding-top:0;
+}
+button{
+	 background: #d94158;
+  background-image: -webkit-linear-gradient(top, #d94158, #ad3838);
+  background-image: -moz-linear-gradient(top, #d94158, #ad3838);
+  background-image: -ms-linear-gradient(top, #d94158, #ad3838);
+  background-image: -o-linear-gradient(top, #d94158, #ad3838);
+  background-image: linear-gradient(to bottom, #d94158, #ad3838);
+  
+  border-radius: 9px;
+  outline:0;
+  font: 50px 'Lato';
+  color: #ffffff;
+  padding: 1% 10% 1% 10%;
+  text-decoration: none;
+  margin-left:21.15%;
+  margin-top:2%;
+  margin-bottom:2%;
+  }
+ button:hover {
+ background: #db6b6b;
+  background-image: -webkit-linear-gradient(top, #db6b6b, #d64949);
+  background-image: -moz-linear-gradient(top, #db6b6b, #d64949);
+  background-image: -ms-linear-gradient(top, #db6b6b, #d64949);
+  background-image: -o-linear-gradient(top, #db6b6b, #d64949);
+  background-image: linear-gradient(to bottom, #db6b6b, #d64949);
+  text-decoration: none;
+}
+input {
+	margin-left:5%;
+	height:3%;
+	width:89%;
+	font:20px/1.5 'Lato';
+	margin-top:0%
+}
+#footer {
+  position:absolute;
+	bottom:0%;
+  right:1%;
+ 
+}
+//Paragraphs
+p {
+  padding-left:0px;
+}
+p.bottom {
+	padding-top:0%;
+  margin-left:auto;
+  margin-right:auto;
+	color:#f7f7f7;
+  max-width:325px;
+  font:27px 'Lato';
+}
+p.footer {
+	color:#f7f7f7
+}
+//Headers
+h1 {
+  font-size:28px;
+}
+h2 {
+  color:#393939;
+}
+h3 {
+padding-bottom:10px;
+}
+h5{
+	margin-left:auto;
+  margin-right:auto;
+  margin-top:12.5%;
+  margin-bottom:0.3%;
+  color:#777;
+  max-width:300px;
+  font-weight:10;
+  padding-top:3%;
+}
+h6{
+	margin:0;
+	padding:4% 10% 0% 0%;
+	padding-left:3.6%;
+}
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 5px #9f9f9f,
+               0 0 20px  #d5d5d5,
+               0 0 30px  #d5d5d5,
+               0 0 35px  #f9f9f9,
+               0 0 40px  #f9f9f9;
+  }
+  to {
+    text-shadow: 0 0 3px #9f9f9f,
+               0 0 10px #d5d5d5,
+               0 0 15px #d5d5d5,
+               0 0 17px #f9f9f9,
+               0 0 20px #f9f9f9,
+               0 0 20px #f9f9f9;
+  }
+}
+
+.chromeicon {
+	width: 25px;
+	height: 25px;
+}
