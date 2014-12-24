@@ -1,0 +1,22 @@
+.chromebook {
+  font-family: Lato;
+  padding-left:2%;
+  margin-left:3%;
+  margin-right:0.5%;
+  margin-top:.7%;
+  margin-bottom:.7%;
+  box-shadow: 3px 3px 10px #c2c2c2;
+  color: #000000;
+}
+
+.available {
+	background-color:#72D376;
+}
+
+.checkedout {
+	background-color:#F9DB45;
+}
+
+.unavailable {
+	background-color:#E14C2B;
+}

@@ -1,0 +1,4 @@
+.chromebook:hover {
+  box-shadow: 5px 0 12px #919191, -5px 0 12px #919191;
+  outline: #25abd9 solid 3px;
+}

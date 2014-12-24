@@ -1,0 +1,11 @@
+<template name="checkout">
+  <div id="center">
+    <div id="sign-in">
+      <h5>Chromebook Checkout</h5>
+      {{#each chromebooks}}
+      	{{> chromebook}}
+      {{/each}}
+      <button id="submit">Checkout!</button>
+    </div>
+  </div>
+</template>
