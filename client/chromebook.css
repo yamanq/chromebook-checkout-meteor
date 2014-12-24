@@ -1,22 +1,31 @@
+body {
+  -webkit-user-select: none;
+}
+
 .chromebook {
   font-family: Lato;
   padding-left:2%;
   margin-left:3%;
-  margin-right:0.5%;
+  margin-right:3%;
   margin-top:.7%;
   margin-bottom:.7%;
   box-shadow: 3px 3px 10px #c2c2c2;
   color: #000000;
 }
 
+.time {
+  font-size: 75%;
+  color: #6D6E6D;
+}
+
 .available {
-	background-color:#72D376;
+  background-color:#72D376;
 }
 
 .checkedout {
-	background-color:#F9DB45;
+  background-color:#F9DB45;
 }
 
 .unavailable {
-	background-color:#E14C2B;
+  background-color:#E14C2B;
 }

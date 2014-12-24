@@ -3,3 +3,5 @@ Router.route('/', function() {
 })
 
 Router.route('/checkout');
+
+Router.route('/login');

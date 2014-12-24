@@ -9,3 +9,5 @@ autopublish
 insecure
 iron:router
 momentjs:moment
+accounts-google
+accounts-ui

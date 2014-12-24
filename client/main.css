@@ -54,7 +54,7 @@ a {
   padding-bottom:0;
   padding-top:0;
 }
-button{
+button {
 	 background: #d94158;
   background-image: -webkit-linear-gradient(top, #d94158, #ad3838);
   background-image: -moz-linear-gradient(top, #d94158, #ad3838);
@@ -71,7 +71,7 @@ button{
   margin-left:21.15%;
   margin-top:2%;
   margin-bottom:2%;
-  }
+}
  button:hover {
  background: #db6b6b;
   background-image: -webkit-linear-gradient(top, #db6b6b, #d64949);
