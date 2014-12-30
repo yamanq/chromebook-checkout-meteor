@@ -6,6 +6,8 @@ var statusmap = {
 
 Meteor.subscribe('chromebook');
 
+//Meteor.subscribe('user');
+
 Template.chromebook.helpers({
   status_class: function() {
     return statusmap[this.status];
@@ -24,13 +26,17 @@ Template.chromebook.helpers({
 
 Template.chromebook.events({
   'click .available': function() {
+    if (Chromebooks.findOne({userid: Meteor.userId()}) === undefined) {
     Chromebooks.update(this._id, {$set: {status: 1}});
     Chromebooks.update(this._id, {$set: {last_checkout: new Date()}});
     Chromebooks.update(this._id, {$set: {userid: Meteor.userId()}});
+    }
   },
   'click .checkedout': function() {
-    Chromebooks.update(this._id, {$set: {status: 0}});
-    Chromebooks.update(this._id, {$set: {last_checkout: null}});
-    Chromebooks.update(this._id, {$set: {userid: null}});
+    if (Meteor.userId() === this.userid) {
+      Chromebooks.update(this._id, {$set: {status: 0}});
+      Chromebooks.update(this._id, {$set: {last_checkout: null}});
+      Chromebooks.update(this._id, {$set: {userid: null}});
+    }
   }
 });

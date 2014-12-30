@@ -2,9 +2,14 @@ Meteor.publish('chromebook', function() {
   return Chromebooks.find();
 });
 
+/*Meteor.publish('user', function() {
+  return Meteor.users.find({_id: this.userId},
+      {fields: {'_id': 1, 'profile.name': 1}});
+});
+*/
+
 var adminusers = [
   "ybq987@gmail.com",
-  // "ksjdragon@gmail.com",
   // "mminer@bloomfield.org",
   "qalieh.yaman90@bloomfield.org"
 ];
