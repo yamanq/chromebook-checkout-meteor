@@ -20,7 +20,7 @@ Meteor.publish('chromebook', function() {
 
   } 
   else {
-    return Chromebooks.find({}, {fields: {number: 1, status: 1, userid: 1, last_checkout: 1}});
+    return Chromebooks.find({}, {fields: {number: 1, status: 1, userid: 1, last_checkout: 1, user: 1}});
 
   }
 });
