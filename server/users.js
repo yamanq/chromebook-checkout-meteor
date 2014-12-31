@@ -18,11 +18,9 @@ Meteor.publish('chromebook', function() {
 
     return Chromebooks.find();
 
-  } else {
-
-    // user not authorized. do not publish secrets
-    this.stop();
-    return;
+  } 
+  else {
+    return Chromebooks.find({}, {fields: {number: 1, status: 1, userid: 1, last_checkout: 1}});
 
   }
 });
