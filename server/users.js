@@ -1,24 +1,30 @@
 Meteor.publish('chromebook', function() {
-  //return Chromebooks.find({}, {fields: {number: 1, status: 1, userid: 1, last_checkout: 1}});
-  /*
-    if (Meteor.user().roles === ['admin']) {
+  // return Chromebooks.find({}, {fields: {number: 1, status: 1, userid: 1, last_checkout: 1}});
+
+  // var user = Meteor.user();
+  // console.log("user:", user);
+  // var field;
+
+  // if (user && user.roles[0] == 'admin') {
+  //   field = {number: 1, status: 1, userid: 1, last_checkout: 1, serial: 1};
+  // }
+  // else {
+  //   field = {number: 1, status: 1, userid: 1, last_checkout: 1};
+  // }
+  // console.log("field:", field);
+  // return Chromebooks.find({}, {fields: field});
+
+  if (Roles.userIsInRole(this.userId, ['admin'])) {
+
     return Chromebooks.find();
-  }
-  else {
-    return Chromebooks.find({}, {fields: {number: 1, status: 1, userid: 1, last_checkout: 1}});
-  }
-  */
 
-  var user = Meteor.user();
-  var field;
+  } else {
 
-  if (user && user.roles[0] === 'admin') {
-    field = {number: 1, status: 1, userid: 1, last_checkout: 1, serial: 1};
+    // user not authorized. do not publish secrets
+    this.stop();
+    return;
+
   }
-  else {
-    field = {number: 1, status: 1, userid: 1, last_checkout: 1};
-  }
-  return Chromebooks.find({}, {fields: field});
 });
 
 Meteor.publish('user', function() {
@@ -40,15 +46,15 @@ for (var i = 0; i < adminusers.length; i++) {
   }
 };
 
-Accounts.validateNewUser(function (user) {
-  var loggedInUser = Meteor.user();
+// Accounts.validateNewUser(function (user) {
+//   var loggedInUser = Meteor.user();
 
-  if (Roles.userIsInRole(loggedInUser, ['admin'])) {
-    return true;
-  }
+//   if (Roles.userIsInRole(loggedInUser, ['admin'])) {
+//     return true;
+//   }
 
-  throw new Meteor.Error(403, "Not authorized to create new users");
-});
+//   throw new Meteor.Error(403, "Not authorized to create new users");
+// });
 
 Meteor.methods({
   deleteUser: function (targetUserId, group) {

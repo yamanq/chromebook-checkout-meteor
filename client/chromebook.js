@@ -18,18 +18,16 @@ Template.chromebook.helpers({
     } else {
       return moment(this.last_checkout).fromNow();      
     }
-  },
-  username: function() {
-    return Meteor.users.findOne({_id: this.userid}).profile.name;
   }
 });
 
 Template.chromebook.events({
   'click .available': function() {
     if (Chromebooks.findOne({userid: Meteor.userId()}) === undefined) {
-    Chromebooks.update(this._id, {$set: {status: 1}});
-    Chromebooks.update(this._id, {$set: {last_checkout: new Date()}});
-    Chromebooks.update(this._id, {$set: {userid: Meteor.userId()}});
+      Chromebooks.update(this._id, {$set: {status: 1}});
+      Chromebooks.update(this._id, {$set: {last_checkout: new Date()}});
+      Chromebooks.update(this._id, {$set: {userid: Meteor.userId()}});
+      Chromebooks.update(this._id, {$set: {user: Meteor.user().profile.name}});
     }
   },
   'click .checkedout': function() {
