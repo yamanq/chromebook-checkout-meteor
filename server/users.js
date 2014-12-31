@@ -1,22 +1,43 @@
 Meteor.publish('chromebook', function() {
-  return Chromebooks.find();
+  //return Chromebooks.find({}, {fields: {number: 1, status: 1, userid: 1, last_checkout: 1}});
+  /*
+    if (Meteor.user().roles === ['admin']) {
+    return Chromebooks.find();
+  }
+  else {
+    return Chromebooks.find({}, {fields: {number: 1, status: 1, userid: 1, last_checkout: 1}});
+  }
+  */
+
+  var user = Meteor.user();
+  var field;
+
+  if (user && user.roles[0] === 'admin') {
+    field = {number: 1, status: 1, userid: 1, last_checkout: 1, serial: 1};
+  }
+  else {
+    field = {number: 1, status: 1, userid: 1, last_checkout: 1};
+  }
+  return Chromebooks.find({}, {fields: field});
 });
 
-/*Meteor.publish('user', function() {
-  return Meteor.users.find({_id: this.userId},
-      {fields: {'_id': 1, 'profile.name': 1}});
+Meteor.publish('user', function() {
+  //return Meteor.users.find({}, {fields: {profile: 1}});
+  return Meteor.users.find();
 });
-*/
+
 
 var adminusers = [
   "ybq987@gmail.com",
-  // "mminer@bloomfield.org",
+  "mminer@bloomfield.org",
   "qalieh.yaman90@bloomfield.org"
 ];
 for (var i = 0; i < adminusers.length; i++) {
   var adminuser = adminusers[i];
-  var userID = Meteor.users.findOne({"services.google.email": adminuser})._id;
-  Meteor.users.update(userID, {$set: {roles: ['admin']}});
+  if (Meteor.users.findOne({"services.google.email": adminuser}) != undefined) {
+    var userID = Meteor.users.findOne({"services.google.email": adminuser})._id;
+    Meteor.users.update(userID, {$set: {roles: ['admin']}});
+  }
 };
 
 Accounts.validateNewUser(function (user) {
