@@ -1,12 +1,24 @@
 <template name="admin">
   <div id="center">
-    <div id="sign-in">
+    <div class="content">
       <h5 class="admintitle">Admin Panel</h5>
       <div class="Adding">
         <h6>Add a Chromebook</h6>
+        <form class="new-task">
+          <input type="text" name="anumber" placeholder="Chromebook Number (eg. B1)" />
+          <input type="text" name="aserial" placeholder="Serial Number (eg. ABCD1234)" />
+          <input type="submit" value="Submit" class="add" />
+        </form>
       </div>
       <div>
-        <h6>Remove a Chromebook</h6>
+        <h6>Edit Chromebooks</h6>
+        {{#each chromebooks}}
+          <div class="row">
+            {{> chromebook}}
+            <!-- fa-times -->
+            <i class="icons cross fa fa-exclamation-triangle fa-lg"></i>
+          </div>
+        {{/each}}
       </div>
     </div>
   </div>
