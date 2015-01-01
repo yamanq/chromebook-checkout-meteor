@@ -38,6 +38,15 @@ body {
   transition: color 0.5s;
 }
 
+.edit {
+  color: #C4C4C4;
+  transition: color 0.5s;
+}
+
+.edit:hover {
+  color: #25abd9;
+}
+
 .cross:hover {
   color: #E14C2B;
 }
