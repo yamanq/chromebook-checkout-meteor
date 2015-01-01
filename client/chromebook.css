@@ -11,16 +11,39 @@ body {
   font-family: Lato;
   padding-left:2%;
   margin-left:3%;
-  margin-right:3%;
   margin-bottom: 3%;
   box-shadow: 3px 3px 10px #c2c2c2;
   color: #000000;
   height: 10%;
+  max-width: 80%;
+  min-width: 80%;
 }
+
+.chromebook:hover {
+  box-shadow: 5px 0 12px #919191, -5px 0 12px #919191;
+  outline: #25abd9 solid 3px;
+}
+
 
 .timestamp {
   color: #6D6E6D;
   float: right;
+}
+
+.icons {
+  float: right;
+  margin-top: 2.5%;
+  margin-left: 2%;
+  color: #5A5A5A;
+  transition: color 0.5s;
+}
+
+/*.edit:hover {
+  color: #25abd9;
+}*/
+
+.cross:hover {
+  color: #E14C2B;
 }
 
 .user {
@@ -30,6 +53,7 @@ body {
   margin-bottom: 0%;
   text-align: right;
   padding-right: 10%;
+  transition: color 0.5s;
 }
 .time {
   margin-top: 0%;
@@ -37,16 +61,24 @@ body {
   text-align: right;
   padding-right: 10%;
   margin-bottom: 0%;
+  transition: color 0.5s;
 }
 
 .available {
   background-color:#72D376;
+  transition: background-color 1s;
 }
 
 .checkedout {
   background-color:#F9DB45;
+  transition: background-color 1s;
 }
 
 .unavailable {
   background-color:#E14C2B;
+  transition: background-color 1s;
+}
+
+.unavailable .user, .unavailable .time {
+  color: white;
 }

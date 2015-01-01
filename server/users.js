@@ -1,18 +1,4 @@
 Meteor.publish('chromebook', function() {
-  // return Chromebooks.find({}, {fields: {number: 1, status: 1, userid: 1, last_checkout: 1}});
-
-  // var user = Meteor.user();
-  // console.log("user:", user);
-  // var field;
-
-  // if (user && user.roles[0] == 'admin') {
-  //   field = {number: 1, status: 1, userid: 1, last_checkout: 1, serial: 1};
-  // }
-  // else {
-  //   field = {number: 1, status: 1, userid: 1, last_checkout: 1};
-  // }
-  // console.log("field:", field);
-  // return Chromebooks.find({}, {fields: field});
 
   if (Roles.userIsInRole(this.userId, ['admin'])) {
 
@@ -44,15 +30,19 @@ for (var i = 0; i < adminusers.length; i++) {
   }
 };
 
-// Accounts.validateNewUser(function (user) {
-//   var loggedInUser = Meteor.user();
-
-//   if (Roles.userIsInRole(loggedInUser, ['admin'])) {
-//     return true;
-//   }
-
-//   throw new Meteor.Error(403, "Not authorized to create new users");
-// });
+var teachers = [
+  // Add all Teachers here
+  "mminer@bloomfield.org",
+  "qalieh.yaman90@bloomfield.org",
+  "ruhelski@bloomfield.org"
+];
+for (var i = 0; i < teachers.length; i++) {
+  var teacher = teachers[i];
+  if (Meteor.users.findOne({"services.google.email": teacher}) != undefined) {
+    var userID = Meteor.users.findOne({"services.google.email": teacher})._id;
+    Meteor.users.update(userID, {$set: {roles: ['teacher']}});
+  }
+};
 
 Meteor.methods({
   deleteUser: function (targetUserId, group) {

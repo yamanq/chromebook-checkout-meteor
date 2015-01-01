@@ -23,7 +23,8 @@ Template.chromebook.helpers({
 
 Template.chromebook.events({
   'click .available': function() {
-    if (Chromebooks.findOne({userid: Meteor.userId()}) === undefined) {
+    if ((Chromebooks.findOne({userid: Meteor.userId()}) === undefined) 
+    || (Roles.userIsInRole(Meteor.userId(), ['admin', 'teacher']))) {
       Chromebooks.update(this._id, {$set: {status: 1}});
       Chromebooks.update(this._id, {$set: {last_checkout: new Date()}});
       Chromebooks.update(this._id, {$set: {userid: Meteor.userId()}});

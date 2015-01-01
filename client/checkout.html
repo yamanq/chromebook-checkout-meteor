@@ -1,11 +1,15 @@
 <template name="checkout">
-  <div id="center">
-    <div id="sign-in">
-      <h5>Chromebook Checkout</h5>
-      {{#each chromebooks}}
-      	{{> chromebook}}
-      {{/each}}
-      <button id="submit">Checkout!</button>
+    <div class="center-box">
+	    <div class="title">
+	      <h5 class="titleword">Chromebook Checkout</h5>
+	    </div>
+	      {{#each chromebooks}}
+	    		<div class="row">
+	        	{{> chromebook}}
+	      		<i class="icons cross fa fa-exclamation-triangle fa-lg"></i>
+	      		<!-- fa-times -->
+<!-- 	      		<i class="icons edit fa fa-pencil-square-o"></i> -->
+     			</div>
+	      {{/each}}
     </div>
-  </div>
 </template>
