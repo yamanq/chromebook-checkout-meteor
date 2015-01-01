@@ -11,12 +11,6 @@ Meteor.publish('chromebook', function() {
   }
 });
 
-Meteor.publish('user', function() {
-  //return Meteor.users.find({}, {fields: {profile: 1}});
-  return Meteor.users.find();
-});
-
-
 var adminusers = [
   "ybq987@gmail.com",
   "mminer@bloomfield.org",
