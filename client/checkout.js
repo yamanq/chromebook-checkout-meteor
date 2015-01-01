@@ -24,5 +24,13 @@ Template.checkout.events({
     else {
       alert("Access Denied");
     }
+  },
+  'click .edit': function() {
+    if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
+      Router.go('/admin');
+    }
+    else {
+      alert("Access Denied");
+    }
   }
 });

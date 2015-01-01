@@ -37,13 +37,5 @@ Template.chromebook.events({
       Chromebooks.update(this._id, {$set: {last_checkout: null}});
       Chromebooks.update(this._id, {$set: {userid: null}});
     }
-  },
-  'click .cross': function() {
-    if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
-      Router.go('/admin');
-    }
-    else {
-      alert("Access Denied");
-    }
   }
 });
