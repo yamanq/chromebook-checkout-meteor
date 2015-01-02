@@ -9,7 +9,9 @@ Template.admin.events({
     event.preventDefault();
 
     var chromebook_number = $("input[name='anumber']")[0].value;
-    var chromebook_serial = $("input[name='anumber']")[0].nextElementSibling.value;
+    var chromebook_serial = $("input[name='aserial']")[0].value;
+
+    if (!((chromebook_number === "") || (chromebook_serial === "")))
 
     Chromebooks.insert({
       "status": 0,
@@ -20,10 +22,34 @@ Template.admin.events({
     });
 
     // Clear form
-    chromebook_number.value = "";
-    chromebook_serial.value = "";
+    $("input[name='anumber']")[0].value = "";
+    $("input[name='aserial']")[0].value = "";
 
     // Prevent default form
     return false;
+  },
+  'click .cross' : function() {
+    if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
+      Chromebooks.remove(this._id);
+    }
+  },
+  'click .yield' : function() {
+    if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
+      if (this.status === 0) {
+        Chromebooks.update(this._id, {$set: {status: 2}});
+        Chromebooks.update(this._id, {$set: {user: null}});
+      }
+      else if (this.status ===1) {
+        Chromebooks.update(this._id, {$set: {status: 2}});
+      }
+      else {
+        Chromebooks.update(this._id, {$set: {status: 0}});
+        Chromebooks.update(this._id, {$set: {last_checkout: null}});
+        Chromebooks.update(this._id, {$set: {userid: null}});
+      }
+    }
+    else {
+      alert("Access Denied");
+    }
   }
 });

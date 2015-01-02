@@ -22,6 +22,15 @@ Template.chromebook.helpers({
 });
 
 Template.chromebook.events({
+  'click .available, click .unavailable, click .checkedout': function() {
+    if (Roles.userIsInRole(Meteor.userId(), ['admin'])
+    && Router.current().route.path() === '/admin') {
+      var chromebook_number = $("input[name='anumber']")[0].value;
+      var chromebook_serial = $("input[name='anumber']")[0].nextElementSibling.value;
+      chromebook_number = this.number;
+      chromebook_serial = this.serial;
+    }
+  },
   'click .available': function() {
     if ((Chromebooks.findOne({userid: Meteor.userId()}) === undefined) 
     || (Roles.userIsInRole(Meteor.userId(), ['admin', 'teacher']))) {

@@ -18,6 +18,14 @@ html {
   display: table;
 }
 
+.chromeicon {
+  height: 35px;
+  width: 35px;
+  float: right;
+  margin-right: 31%;
+  margin-top: 1.2%;
+}
+
 body {
   font:35px/1.5 'Lato';
   color:#777;
@@ -100,12 +108,17 @@ p {
 }
 p.bottom {
 	padding-top:0%;
-  margin-left:auto;
+  margin-left:30%;
   margin-right:auto;
 	color:#f7f7f7;
   max-width:325px;
   font:27px 'Lato';
 }
+
+.bottom {
+  display: inline;
+}
+
 p.footer {
 	color:#f7f7f7
 }
