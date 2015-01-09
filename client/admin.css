@@ -19,3 +19,7 @@
 .remove {
   margin-bottom: 4%;
 }
+
+.row {
+  min-width: 80%;
+}
