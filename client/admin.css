@@ -20,6 +20,10 @@
   margin-bottom: 4%;
 }
 
+.yield:hover {
+  color: #E14C2B;
+}
+
 .row {
   min-width: 80%;
 }
