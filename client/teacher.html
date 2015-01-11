@@ -1,15 +1,17 @@
 <template name="teacher">
-  <div id="center">
-    {{#basicTabs tabs=tabs}}
-
-    <div>
-      {{> chromebook}}
-    </div>
+    <div id="center">
+      <h5 class="titleword">Chromebook Checkout</h5>
+        <div id="tabs">
+              {{#teacherTabs tabs=tabs}}
+           <div>
+              {{> chromebook}}
+           </div>
      
-   <div>
-      <h2>Bye</h2>
-    </div>
+            <div>
+              <h2>Bye</h2>
+            </div>
 
-    {{/basicTabs}}
-  </div>  
+               {{/teacherTabs}}
+        </div>
+    </div>  
 </template>

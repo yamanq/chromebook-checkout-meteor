@@ -1,0 +1,34 @@
+.tabs-container
+ .tabs-list,
+.dynamicTabs-container .tabs-list {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.tabs-container
+ .tabs-list .tab-item,
+.dynamicTabs-container .tabs-list .tab-item {
+  font-weight: 600;
+  font-size: 13px;
+  float: left;
+  padding: 13px 22.57%;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+}
+.tabs-container
+ .tabs-list .tab-item.active,
+.dynamicTabs-container .tabs-list .tab-item.active {
+  border-radius: top 5px;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  margin-bottom: -1px !important;
+  padding: 13px 22% 14px 22% !important;
+  background-color: #fff;
+  color: #333;
+}
+.tabs-content-container {
+  padding: 12% 15px 15px 15px;
+}
+

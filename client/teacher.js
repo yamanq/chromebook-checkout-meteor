@@ -1,5 +1,5 @@
 ReactiveTabs.createInterface({
-  template: 'basicTabs',
+  template: 'teacherTabs',
   onChange: function (slug, template) {
     // This callback runs every time a tab changes.
     // The `template` instance is unique per {{#basicTabs}} block.
