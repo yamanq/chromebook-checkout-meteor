@@ -30,8 +30,7 @@ var teachers = [
   // Add all Teachers here
   "mminer@bloomfield.org",
   "qalieh.yaman90@bloomfield.org",
-  "ruhelski@bloomfield.org",
-  "ksjdragon@gmail.com"
+  "ruhelski@bloomfield.org"
 ];
 for (var i = 0; i < teachers.length; i++) {
   var teacher = teachers[i];
