@@ -25,3 +25,10 @@ Router.route('/admin', function() {
     this.redirect('/checkout');
   }
 });
+Router.route('/teacher', function() {
+  if (Meteor.user().roles[0]==='teacher') {
+    this.render("teacher");
+  } else {
+    this.redirect('/checkout');
+  }
+});
