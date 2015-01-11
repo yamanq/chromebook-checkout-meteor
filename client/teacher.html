@@ -3,13 +3,18 @@
       <h5 class="titleword">Chromebook Checkout</h5>
         <div id="tabs">
               {{#teacherTabs tabs=tabs}}
+          <!-- Single -->
            <div>
-              {{> chromebook}}
+                {{#each chromebooks}}
+              <div class="row">
+                  {{> chromebook}}
+              </div>
+                {{/each}}
            </div>
-     
-            <div>
-              <h2>Bye</h2>
-            </div>
+          <!-- Carts -->
+           <div>
+              <h5>Coming soon...</h5>
+           </div>
 
                {{/teacherTabs}}
         </div>
