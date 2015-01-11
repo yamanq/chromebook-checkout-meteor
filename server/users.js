@@ -14,9 +14,7 @@ Meteor.publish('chromebook', function() {
 var adminusers = [
   "ybq987@gmail.com",
   "mminer@bloomfield.org",
-  "qalieh.yaman90@bloomfield.org",
-  "ksjdragon@gmail.com",
-  "chthomas@bloomfield.org"
+  "qalieh.yaman90@bloomfield.org"
 ];
 for (var i = 0; i < adminusers.length; i++) {
   var adminuser = adminusers[i];
