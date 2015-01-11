@@ -27,9 +27,9 @@ Router.route('/admin', function() {
 });
 
 Router.route('/teacher', function() {
-  if (Roles.userIsInRole(Meteor.userId(), ['admin', 'teacher'])) {
+//  if (Roles.userIsInRole(Meteor.userId(), ['admin', 'teacher'])) {
     this.render("teacher");
-  } else {
-    this.redirect('/login');
-  }
+/*  } else {
+       this.redirect('/login');
+    }*/
 });

@@ -1,16 +1,15 @@
 <template name="teacher">
-  <div id="center">       
-    <ul class="nav nav-tabs">
-      
-      <li><a href="#single" role="tab" data-toggle="tab">First</a></li>
-      <li><a href="#carts" role="tab" data-toggle="tab">Second</a></li>
-    </ul>
+  <div id="center">
+    {{#basicTabs tabs=tabs}}
 
-    <div id="sign-in" class="tab-pane">
-      {{> chromebooks }}
-    </div>d
-    <div id="carts" class="tab-pane">
-      {{> carts }}
+    <div>
+      {{> chromebook}}
     </div>
-  </div>
+     
+   <div>
+      <h2>Bye</h2>
+    </div>
+
+    {{/basicTabs}}
+  </div>  
 </template>
