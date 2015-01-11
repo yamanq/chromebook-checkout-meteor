@@ -22,7 +22,7 @@ for (var i = 0; i < adminusers.length; i++) {
   var adminuser = adminusers[i];
   if (Meteor.users.findOne({"services.google.email": adminuser}) != undefined) {
     var userID = Meteor.users.findOne({"services.google.email": adminuser})._id;
-    Meteor.users.update(userID, {$set: {roles: ['admin']}});
+    Roles.addUsersToRoles(userID, ['admin']);    
   }
 };
 
@@ -37,7 +37,7 @@ for (var i = 0; i < teachers.length; i++) {
   var teacher = teachers[i];
   if (Meteor.users.findOne({"services.google.email": teacher}) != undefined) {
     var userID = Meteor.users.findOne({"services.google.email": teacher})._id;
-    Meteor.users.update(userID, {$set: {roles: ['teacher']}});
+    Roles.addUsersToRoles(userID, ['teacher']);
   }
 };
 
