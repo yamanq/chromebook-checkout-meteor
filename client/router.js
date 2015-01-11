@@ -19,14 +19,15 @@ Router.route('/login', function() {
 });
 
 Router.route('/admin', function() {
-  if (Meteor.user().roles[0]==='admin') {
+  if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
     this.render("admin");
   } else {
     this.redirect('/checkout');
   }
 });
+
 Router.route('/teacher', function() {
-  if (Meteor.user().roles[0]==='teacher') {
+  if (Roles.userIsInRole(Meteor.userId(), ['admin', 'teacher'])) {
     this.render("teacher");
   } else {
     this.redirect('/checkout');
