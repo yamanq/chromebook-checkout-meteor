@@ -17,6 +17,9 @@ Template.teacher.helpers({
 Template.teacher.helpers({
   chromebooks: function() {
     return Chromebooks.find();
+  },
+  carts: function() {
+    return carts.find();
   }
 });
 

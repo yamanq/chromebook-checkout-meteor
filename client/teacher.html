@@ -13,7 +13,11 @@
            </div>
           <!-- Carts -->
            <div>
-              <h5>Coming soon...</h5>
+            {{#each carts}}
+              <div class="row">
+                {{>cart}}
+              </div>
+            {{/each}}
            </div>
 
                {{/teacherTabs}}
