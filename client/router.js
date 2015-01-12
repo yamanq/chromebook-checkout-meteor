@@ -19,11 +19,11 @@ Router.route('/login', function() {
 });
 
 Router.route('/admin', function() {
-  if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
+//  if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
     this.render("admin");
-  } else {
+/*  } else {
     this.redirect('/login');
-  }
+  }*/
 });
 
 Router.route('/teacher', function() {

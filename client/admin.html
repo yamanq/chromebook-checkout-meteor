@@ -1,7 +1,11 @@
 <template name="admin">
   <div id="center">
+    <h5 class="admintitle">Admin Panel</h5>
     <div class="content">
-      <h5 class="admintitle">Admin Panel</h5>
+      
+              {{#teacherTabs tabs=tabs}}
+          <!-- Single -->
+      <div>
       <div class="Adding">
         <h6>Add a Chromebook</h6>
         <form class="new-task">
@@ -21,5 +25,11 @@
         {{/each}}
       </div>
     </div>
+          <!-- Carts -->
+      <div>
+
+      </div>
+            {{/teacherTabs}}
+  </div>
   </div>
 </template> 

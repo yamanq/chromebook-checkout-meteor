@@ -4,6 +4,22 @@ Template.admin.helpers({
   }
 });
 
+ReactiveTabs.createInterface({
+  template: 'teacherTabs',
+  onChange: function (slug, template) {
+  }
+});
+
+Template.admin.helpers({
+  tabs: function () {
+    // Every tab object MUST have a name and a slug!
+    return [
+      { name: 'Single', slug: 'single' },
+      { name: 'Carts', slug: 'carts' }
+       ];
+  }
+});
+
 Template.admin.events({
   "submit .add, click .add": function (event) {
     event.preventDefault();
