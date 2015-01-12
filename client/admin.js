@@ -1,6 +1,9 @@
 Template.admin.helpers({
   chromebooks: function() {
     return Chromebooks.find();
+  },
+  carts: function() {
+    return carts.find();
   }
 });
 
@@ -36,7 +39,7 @@ Template.admin.events({
       "serial": chromebook_serial,
       "number": chromebook_number
     });
-
+  
     // Clear form
     $("input[name='anumber']")[0].value = "";
     $("input[name='aserial']")[0].value = "";
@@ -44,9 +47,53 @@ Template.admin.events({
     // Prevent default form
     return false;
   },
+  "submit .addc, click .addc": function (event) {
+    event.preventDefault();
+
+    var cart_number = $("input[name='acnumber']")[0].value;
+
+    if (!((cart_number === "")))
+
+    carts.insert({
+      "status": 0,
+      "userid": null,
+      "last_checkout": null,
+      "number": cart_number
+    });
+
+    // Clear form
+    $("input[name='acnumber']")[0].value = "";
+
+    // Prevent default form
+    return false;
+  },
   'click .cross' : function() {
     if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
       Chromebooks.remove(this._id);
+    }
+  },
+  'click .crossc' : function() {
+    if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
+      carts.remove(this._id);
+    }
+  },
+  'click .yieldc' : function() {
+    if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
+      if (this.status === 0) {
+        carts.update(this._id, {$set: {status: 2}});
+      }
+      else if (this.status === 1) {
+        carts.update(this._id, {$set: {status: 2}});
+      }
+      else {
+        carts.update(this._id, {$set: {status: 0}});
+        carts.update(this._id, {$set: {last_checkout: null}});
+        carts.update(this._id, {$set: {userid: null}});
+        carts.update(this._id, {$set: {user: null}});
+      }
+    }
+    else {
+      alert("Access Denied");
     }
   },
   'click .yield' : function() {

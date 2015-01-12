@@ -47,7 +47,7 @@ body {
   color: #25abd9;
 }
 
-.cross:hover {
+.cross:hover, .crossc:hover{
   color: #E14C2B;
 }
 

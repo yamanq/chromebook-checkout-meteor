@@ -11,6 +11,10 @@ Meteor.publish('chromebook', function() {
   }
 });
 
+Meteor.publish('carts', function() {
+  return carts.find();
+});
+
 var adminusers = [
   "ybq987@gmail.com",
   "mminer@bloomfield.org",

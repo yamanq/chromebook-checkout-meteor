@@ -21,7 +21,7 @@
   margin-bottom: 4%;
 }
 
-.yield:hover {
+.yield:hover, .yieldc:hover{
   color: #E14C2B;
 }
 

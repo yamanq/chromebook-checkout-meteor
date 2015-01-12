@@ -27,9 +27,21 @@
     </div>
           <!-- Carts -->
       <div>
-
+        <h6>Add a Cart</h6>
+        <form class="new-task">
+          <input type="text" name="acnumber" placeholder="Cart Number (ex. B)"/>
+          <input type="submit" value="Submit" class="addc" />
+        </form>
+        <h6> Edit Carts</h6>
+        {{#each carts}}
+        <div class="row">
+          {{>cart}}
+          <i class="icons yieldc fa fa-exclamation-triangle fa-lg"></i>
+          <i class="icons crossc fa fa-times fa-lg"></i>
+        </div>
+          {{/each}}
       </div>
-            {{/teacherTabs}}
-  </div>
+        {{/teacherTabs}}
+    </div>
   </div>
 </template> 
