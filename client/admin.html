@@ -1,5 +1,5 @@
 <template name="admin">
-  <div id="main-center">
+  <div id="main-center-admin">
     <h5 class="titleadmin">Admin Panel</h5>
     <div class="content">
       
@@ -14,13 +14,15 @@
           <input type="submit" value="Submit" class="add" />
         </form>
       </div>
-      <div>
+      <div id="edit-admin">
         <h6>Edit Chromebooks</h6>
         {{#each chromebooks}}
-          <div class="row">
+          <div class="row-admin">
             {{> chromebook}}
             <i class="icons yield fa fa-exclamation-triangle fa-lg"></i>
+            <div id="overlap-fix">
             <i class="icons cross fa fa-times fa-lg"></i>
+          </div>
           </div>
         {{/each}}
       </div>
@@ -32,15 +34,19 @@
           <input type="text" name="acnumber" placeholder="Cart Number (ex. B)"/>
           <input type="submit" value="Submit" class="addc" />
         </form>
+        <div id="edit-admin">
         <h6> Edit Carts</h6>
         {{#each carts}}
-        <div class="row">
+        <div class="row-admin">
           {{>cart}}
           <i class="icons yieldc fa fa-exclamation-triangle fa-lg"></i>
+          <div id="overlap-fix">
           <i class="icons crossc fa fa-times fa-lg"></i>
+        </div>
         </div>
           {{/each}}
       </div>
+    </div>
         {{/teacherTabs}}
     </div>
   </div>
