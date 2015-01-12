@@ -19,11 +19,11 @@ html {
 }
 
 .chromeicon {
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
   float: right;
-  margin-right: 31%;
-  margin-top: 1.2%;
+  margin-right: 41.4%;
+  margin-top: 0.5%;
 }
 
 body {
@@ -108,7 +108,7 @@ p {
 }
 p.bottom {
 	padding-top:0%;
-  margin-left:30%;
+  margin-left:41.5%;
   margin-right:auto;
 	color:#f7f7f7;
   max-width:325px;
