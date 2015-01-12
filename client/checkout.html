@@ -1,8 +1,10 @@
 <template name="checkout">
-    <div class="center-box">
-	    <div class="title">
-	      <h5 class="titleword">Chromebook Checkout</h5>
+    <div id="main-center">
+    	<div>
+	      <h5>Chromebook Checkout</h5>
 	    </div>
+	     <div id="border">
+	      <div id="chromebooks">
 	      {{#each chromebooks}}
 	    		<div class="row">
 	        	{{> chromebook}}
@@ -10,6 +12,9 @@
 	      		<!-- <i class="icons cross fa fa-exclamation-triangle fa-lg"></i> -->
      			</div>
 	      {{/each}}
+	  	  </div>
+	  	  </div>
+	  	  <i class="icons teacher fa fa-user"></i>	
 	      <i class="icons edit fa fa-pencil-square-o fa-lg"></i>
-    </div>
+      </div>
 </template>

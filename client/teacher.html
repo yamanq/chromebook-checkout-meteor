@@ -1,10 +1,10 @@
 <template name="teacher">
-    <div id="centerbox">
-      <h5 class="titleword">Chromebook Checkout</h5>
-        <div id="tabs">
+    <div id="main-center">
+      <h5>Chromebook Checkout</h5>
+          <div>
               {{#teacherTabs tabs=tabs}}
           <!-- Single -->
-           <div>
+           <div id="tchromebooks">
               {{#each chromebooks}}
                 <div class="row">
                   {{> chromebook}}
@@ -21,6 +21,6 @@
            </div>
 
                {{/teacherTabs}}
+            </div>
         </div>
-    </div>  
 </template>

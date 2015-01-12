@@ -32,5 +32,13 @@ Template.checkout.events({
     else {
       alert("Access Denied");
     }
+  },
+  'click .teacher': function() {
+    if (Roles.userIsInRole(Meteor.userId(), ['admin', 'teacher'])) {
+      Router.go('/teacher');
+    }
+    else {
+      alert("Access Denied");
+    }
   }
 });
