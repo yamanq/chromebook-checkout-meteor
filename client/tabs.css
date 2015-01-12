@@ -26,3 +26,8 @@
   padding: 4.2% 15px 15px 15px;
 }
 
+.tabs-content {
+overflow: scroll;
+min-width: 500px;
+max-height: 500px;
+}

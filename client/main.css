@@ -113,13 +113,15 @@ button {
   background-image: linear-gradient(to bottom, #db6b6b, #d64949);
   text-decoration: none;
 }
-#chromebooks, #carts, #tchromebooks {
+#chromebooks, #carts, .tchromebooks {
   overflow: auto;
   padding-top:.5%;
   padding-bottom:.5%;
+}
+#chromebooks, #carts {
   max-height:600px;
 }
-#tchromebooks {
+.tchromebooks {
   max-height:500px;
 }
 #border {
