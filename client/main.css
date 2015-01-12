@@ -86,6 +86,33 @@ a {
   padding-bottom:0;
   padding-top:0;
 }
+button {
+   background: #d94158;
+  background-image: -webkit-linear-gradient(top, #d94158, #ad3838);
+  background-image: -moz-linear-gradient(top, #d94158, #ad3838);
+  background-image: -ms-linear-gradient(top, #d94158, #ad3838);
+  background-image: -o-linear-gradient(top, #d94158, #ad3838);
+  background-image: linear-gradient(to bottom, #d94158, #ad3838);
+  
+  border-radius: 9px;
+  outline:0;
+  font: 50px 'Lato';
+  color: #ffffff;
+  padding: 1% 10% 1% 10%;
+  text-decoration: none;
+  margin-left:21.15%;
+  margin-top:2%;
+  margin-bottom:2%;
+}
+ button:hover {
+ background: #db6b6b;
+  background-image: -webkit-linear-gradient(top, #db6b6b, #d64949);
+  background-image: -moz-linear-gradient(top, #db6b6b, #d64949);
+  background-image: -ms-linear-gradient(top, #db6b6b, #d64949);
+  background-image: -o-linear-gradient(top, #db6b6b, #d64949);
+  background-image: linear-gradient(to bottom, #db6b6b, #d64949);
+  text-decoration: none;
+}
 #chromebooks, #carts {
   overflow: auto;
   padding-top:.5%;
@@ -137,33 +164,7 @@ a {
 }
 //End of Admin Panel
 
-button {
-	 background: #d94158;
-  background-image: -webkit-linear-gradient(top, #d94158, #ad3838);
-  background-image: -moz-linear-gradient(top, #d94158, #ad3838);
-  background-image: -ms-linear-gradient(top, #d94158, #ad3838);
-  background-image: -o-linear-gradient(top, #d94158, #ad3838);
-  background-image: linear-gradient(to bottom, #d94158, #ad3838);
-  
-  border-radius: 9px;
-  outline:0;
-  font: 50px 'Lato';
-  color: #ffffff;
-  padding: 1% 10% 1% 10%;
-  text-decoration: none;
-  margin-left:21.15%;
-  margin-top:2%;
-  margin-bottom:2%;
-}
- button:hover {
- background: #db6b6b;
-  background-image: -webkit-linear-gradient(top, #db6b6b, #d64949);
-  background-image: -moz-linear-gradient(top, #db6b6b, #d64949);
-  background-image: -ms-linear-gradient(top, #db6b6b, #d64949);
-  background-image: -o-linear-gradient(top, #db6b6b, #d64949);
-  background-image: linear-gradient(to bottom, #db6b6b, #d64949);
-  text-decoration: none;
-}
+
 input {
 	margin-left:5%;
 	height:3%;
