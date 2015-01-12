@@ -45,6 +45,7 @@ Template.chromebook.events({
       Chromebooks.update(this._id, {$set: {status: 0}});
       Chromebooks.update(this._id, {$set: {last_checkout: null}});
       Chromebooks.update(this._id, {$set: {userid: null}});
+      Chromebooks.update(this._id, {$set: {user: null}});
     }
   }
 });

@@ -1,0 +1,1 @@
+carts = new Mongo.Collection("carts");
