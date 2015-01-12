@@ -38,12 +38,13 @@ body {
   transition: color 0.5s;
 }
 
-.edit {
+.edit, .teacher {
   color: #C4C4C4;
   transition: color 0.5s;
 }
 
-.edit:hover {
+
+.edit:hover, .teacher:hover {
   color: #25abd9;
 }
 
