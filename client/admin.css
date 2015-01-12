@@ -1,0 +1,15 @@
+.remove {
+  margin-bottom: 4%;
+}
+
+.yield:hover {
+  color: #E14C2B;
+}
+
+.row {
+  min-width: 80%;
+}
+#edit-admin {
+  max-height:350px;
+  overflow:auto;
+}
