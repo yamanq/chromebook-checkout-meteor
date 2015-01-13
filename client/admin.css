@@ -2,7 +2,7 @@
   margin-left:100px;
   margin-top: 16px;
 } 
-.yield:hover {
+.yield:hover, .yieldc:hover {
   color: #E14C2B;
 }
 .row-admin {

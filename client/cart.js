@@ -6,7 +6,7 @@ var statusmap = {
 
 Meteor.subscribe('carts');
 
-Template.chromebook.helpers({
+Template.cart.helpers({
   status_class: function() {
     return statusmap[this.status];
   },
@@ -15,6 +15,26 @@ Template.chromebook.helpers({
       return "";
     } else {
       return moment(this.last_checkout).fromNow();      
+    }
+  }
+});
+
+Template.cart.events({
+  'click .available': function() {
+    if ((carts.findOne({userid: Meteor.userId()}) === undefined) 
+    || (Roles.userIsInRole(Meteor.userId(), ['admin', 'teacher']))) {
+      carts.update(this._id, {$set: {status: 1}});
+      carts.update(this._id, {$set: {last_checkout: new Date()}});
+      carts.update(this._id, {$set: {userid: Meteor.userId()}});
+      carts.update(this._id, {$set: {user: Meteor.user().profile.name}});
+    }
+  },
+  'click .checkedout': function() {
+    if (Meteor.userId() === this.userid) {
+      carts.update(this._id, {$set: {status: 0}});
+      carts.update(this._id, {$set: {last_checkout: null}});
+      carts.update(this._id, {$set: {userid: null}});
+      carts.update(this._id, {$set: {user: null}});
     }
   }
 });
