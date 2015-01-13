@@ -1,0 +1,33 @@
+<template name="teacher">
+    <div class="main-center">
+      <div>
+      <h5>Chromebook Checkout</h5>
+      </div>
+              {{#teacherTabs tabs=tabs}}
+          <!-- Single -->
+<<<<<<< HEAD
+          <div class="tchChromebooks">
+            <div>
+=======
+           <div>
+>>>>>>> a6fe1eebdc16312db82bdb592ef5517d686cb733
+              {{#each chromebooks}}
+                <div class="row">
+                  {{> chromebook}}
+                </div>
+              {{/each}}
+            </div>
+          </div>
+          <!-- Carts -->
+          <div class="tchChromebooks">
+            <div>
+            {{#each carts}}
+              <div class="row">
+                {{>cart}}
+              </div>
+            {{/each}}
+          </div>
+          </div>
+               {{/teacherTabs}}
+        </div>
+</template>
