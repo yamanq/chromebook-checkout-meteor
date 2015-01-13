@@ -1,26 +1,29 @@
 <template name="teacher">
-    <div id="main-center">
+    <div class="main-center">
+      <div>
       <h5>Chromebook Checkout</h5>
-          <div>
+      </div>
               {{#teacherTabs tabs=tabs}}
           <!-- Single -->
-           <div id="tchromebooks">
+          <div class="tchChromebooks">
+            <div>
               {{#each chromebooks}}
                 <div class="row">
                   {{> chromebook}}
                 </div>
               {{/each}}
-           </div>
+            </div>
+          </div>
           <!-- Carts -->
-           <div>
+          <div class="tchChromebooks">
+            <div>
             {{#each carts}}
               <div class="row">
                 {{>cart}}
               </div>
             {{/each}}
-           </div>
-
+          </div>
+          </div>
                {{/teacherTabs}}
-            </div>
         </div>
 </template>

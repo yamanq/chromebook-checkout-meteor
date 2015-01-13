@@ -12,7 +12,7 @@ Template.initial.events({
     var randomint = Math.floor(Math.random() * (links.length - 1));
     window.open(links[randomint], "_blank");
   },
-  'click #submit': function() {
+  'click .submit': function() {
     Router.go('/checkout');
   }
 })

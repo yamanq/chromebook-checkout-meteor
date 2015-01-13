@@ -1,53 +1,52 @@
 <template name="admin">
-  <div id="main-center-admin">
-    <h5 class="titleadmin">Admin Panel</h5>
-    <div class="content">
-      
-              {{#teacherTabs tabs=tabs}}
+  <div class="main-center-admin">
+    <div>
+    <h5>Admin Panel</h5>
+    </div>
+    
+          {{#teacherTabs tabs=tabs}}
           <!-- Single -->
+      <div class="border">
       <div>
-      <div class="Adding">
-        <h6>Add a Chromebook</h6>
-        <form class="new-task">
-          <input type="text" name="anumber" placeholder="Chromebook Number (eg. B1)" />
-          <input type="text" name="aserial" placeholder="Serial Number (eg. ABCD1234)" />
-          <input type="submit" value="Submit" class="add" />
-        </form>
-      </div>
-      <div id="edit-admin">
-        <h6>Edit Chromebooks</h6>
+        <h6>Edit Chromebooks</h6> <!-- Edit Chromebooks -->
         {{#each chromebooks}}
           <div class="row-admin">
             {{> chromebook}}
             <i class="icons yield fa fa-exclamation-triangle fa-lg"></i>
-            <div id="overlap-fix">
+            <div class="overlap-fix">
             <i class="icons cross fa fa-times fa-lg"></i>
-          </div>
-          </div>
-        {{/each}}
-      </div>
+          </div> 
+      </div> 
+      {{/each}}
+        <h6>Add a Chromebook</h6> <!-- Add Chromebooks -->
+        <form class="new-task">
+          <input type="text" name="anumber" placeholder="Chromebook Number (eg. B1)" class="submission" />
+          <input type="text" name="aserial" placeholder="Serial Number (eg. ABCD1234)" class="submission"/>
+          <input type="submit" value="Submit" class="add" />
+        </form>
+    </div>
     </div>
           <!-- Carts -->
+      <div class="border">
       <div>
-        <h6>Add a Cart</h6>
-        <form class="new-task">
-          <input type="text" name="acnumber" placeholder="Cart Number (ex. B)"/>
-          <input type="submit" value="Submit" class="addc" />
-        </form>
-        <div id="edit-admin">
-        <h6> Edit Carts</h6>
+        <h6> Edit Carts</h6> <!-- Editing Carts -->
         {{#each carts}}
         <div class="row-admin">
           {{>cart}}
           <i class="icons yieldc fa fa-exclamation-triangle fa-lg"></i>
-          <div id="overlap-fix">
+          <div class="overlap-fix">
           <i class="icons crossc fa fa-times fa-lg"></i>
         </div>
-        </div>
-          {{/each}}
-      </div>
+       </div>
+       {{/each}}
+      <h6>Add a Cart</h6> <!-- Adding Carts -->
+        <form class="new-task">
+          <input type="text" name="acnumber" placeholder="Cart Number (ex. A)" class="submission"/>
+          <input type="submit" value="Submit" class="add" />
+        </form>
+    </div>
     </div>
         {{/teacherTabs}}
-    </div>
+    
   </div>
 </template> 

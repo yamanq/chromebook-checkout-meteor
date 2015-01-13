@@ -1,0 +1,44 @@
+.submit {
+   background: #d94158;
+  background-image: -webkit-linear-gradient(top, #d94158, #ad3838);
+  background-image: -moz-linear-gradient(top, #d94158, #ad3838);
+  background-image: -ms-linear-gradient(top, #d94158, #ad3838);
+  background-image: -o-linear-gradient(top, #d94158, #ad3838);
+  background-image: linear-gradient(to bottom, #d94158, #ad3838);
+  
+  border-radius: 9px;
+  outline:0;
+  font: 50px 'Lato';
+  color: #ffffff;
+  padding: 1% 10% 1% 10%;
+  text-decoration: none;
+  margin-left:21.15%;
+  margin-top:2%;
+  margin-bottom:2%;
+}
+.submit:hover {
+ background: #db6b6b;
+  background-image: -webkit-linear-gradient(top, #db6b6b, #d64949);
+  background-image: -moz-linear-gradient(top, #db6b6b, #d64949);
+  background-image: -ms-linear-gradient(top, #db6b6b, #d64949);
+  background-image: -o-linear-gradient(top, #db6b6b, #d64949);
+  background-image: linear-gradient(to bottom, #db6b6b, #d64949);
+  text-decoration: none;
+}
+.chromeicon {
+  height: 30px;
+  width: 30px;
+  float: right;
+  margin-right: 37%;
+  margin-top: 0.75%;
+}
+p.bottom {
+  padding-left:0px;
+  padding-top:0%;
+  margin-left:37.5%;
+  margin-right:auto;
+  color:#f7f7f7;
+  max-width:325px;
+  font:27px 'Lato';
+  display: inline;
+}
