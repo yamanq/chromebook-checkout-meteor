@@ -18,19 +18,15 @@
   border: 1px solid #ddd;
   border-bottom: none;
   margin-bottom: -1px !important;
-  padding: 13px 23.03% 14px 23.02% !important;
+  padding: 13px 23.03% 14px 23.03% !important;
   background-color: #fff;
   color: #333;
 }
 .tabs-content-container {
   padding: 4.2% 15px 15px 15px;
-<<<<<<< HEAD
-=======
 }
-
 .tabs-content {
 overflow: scroll;
 min-width: 500px;
 max-height: 500px;
->>>>>>> a6fe1eebdc16312db82bdb592ef5517d686cb733
 }
