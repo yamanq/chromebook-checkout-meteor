@@ -15,7 +15,7 @@
   margin-top: 0%;
   font-size: 14pt;
 }
-.add {
+.add, .addc {
   background: #d94158;
   background-image: -webkit-linear-gradient(top, #d94158, #ad3838);
   background-image: -moz-linear-gradient(top, #d94158, #ad3838);
@@ -31,7 +31,7 @@
   width: 97%;
   font-size: 18pt;
 }
-.add:hover {
+.add:hover, .addc:hover {
   background: #db6b6b;
   background-image: -webkit-linear-gradient(top, #db6b6b, #d64949);
   background-image: -moz-linear-gradient(top, #db6b6b, #d64949);
@@ -56,8 +56,4 @@
 
 .row {
   min-width: 80%;
-}
-#edit-admin {
-  max-height:350px;
-  overflow:auto;
 }
