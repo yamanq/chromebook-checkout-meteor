@@ -41,9 +41,8 @@
   text-decoration: none;
 }
 .border {
-  padding: 1% 15px 1% 15px;
+  padding: 1% 0px 1% 15px;
   overflow:auto;
-  max-height:550px;
   min-width:700px;
  }
 .remove {

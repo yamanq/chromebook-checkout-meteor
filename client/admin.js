@@ -113,3 +113,10 @@ Template.admin.events({
     }
   }
 });
+
+Template.admin.rendered = function() {
+
+    $(".border.tabs-content").mCustomScrollbar({
+        theme: 'dark'
+    });
+}

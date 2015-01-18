@@ -27,7 +27,7 @@
   padding: 4.2% 15px 15px 15px;
 }
 .tabs-content {
-overflow-y: scroll;
+overflow: auto;
 min-height: 425px;
 max-height: 425px;
 }

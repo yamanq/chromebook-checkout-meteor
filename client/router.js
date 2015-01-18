@@ -13,6 +13,10 @@ Router.route('/checkout', function() {
 Router.route('/login', function() {
   if (Meteor.user()) {
     this.redirect('/checkout');
+  } else if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
+    this.redirect('/admin');
+  } else if (Roles.userIsInRole(Meteor.userId(), ['teacher'])) {
+    this.redirect('/teacher');
   } else {
     this.render("login");
   }
@@ -31,5 +35,5 @@ Router.route('/teacher', function() {
     this.render("teacher");
   } else {
        this.redirect('/login');
-    }
+  }
 });

@@ -22,3 +22,9 @@ Template.teacher.helpers({
     return carts.find();
   }
 });
+Template.teacher.rendered = function() {
+
+    $(".tchChromebooks").mCustomScrollbar({
+        theme: 'dark'
+    });
+}

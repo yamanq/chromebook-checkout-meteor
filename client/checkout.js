@@ -4,7 +4,6 @@ Template.checkout.helpers({
   }
 });
 
-
 Template.checkout.events({
   'click .edit': function() {
     if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
@@ -23,3 +22,9 @@ Template.checkout.events({
     }
   }
 });
+Template.checkout.rendered = function() {
+
+    $(".chckChromebooks").mCustomScrollbar({
+        theme: 'dark'
+    });
+}
