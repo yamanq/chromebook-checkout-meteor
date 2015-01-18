@@ -9,9 +9,9 @@ insecure
 iron:router
 momentjs:moment
 accounts-google
-accounts-ui
 alanning:roles
 mrt:purecss
 fortawesome:fontawesome
 templates:tabs
 mrt:malihu-custom-scrollbar
+accounts-ui
