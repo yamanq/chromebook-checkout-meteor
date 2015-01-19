@@ -25,7 +25,6 @@ body {
   outline: #25abd9 solid 3px;
 }
 
-
 .timestamp {
   color: #6D6E6D;
   float: right;
@@ -37,16 +36,6 @@ body {
   margin-left: 2%;
   color: #5A5A5A;
   transition: color 0.5s;
-}
-
-.edit, .teacher {
-  color: #C4C4C4;
-  transition: color 0.5s;
-}
-
-
-.edit:hover, .teacher:hover {
-  color: #25abd9;
 }
 
 .cross:hover, .crossc:hover{

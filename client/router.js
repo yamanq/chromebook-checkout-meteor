@@ -11,12 +11,14 @@ Router.route('/checkout', function() {
 });
 
 Router.route('/login', function() {
-  if (Meteor.user()) {
-    this.redirect('/checkout');
+  if (Roles.userIsInRole(Meteor.userId(), ['teacher'])) {
+    this.redirect('/teacher');
   } else if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
     this.redirect('/admin');
-  } else if (Roles.userIsInRole(Meteor.userId(), ['teacher'])) {
-    this.redirect('/teacher');
+  } else if (Roles.userIsInRole(Meteor.userId(), ['admin', 'teacher'])) {
+    this.redirect('/admin'); 
+  } else if (Meteor.user()) {
+    this.redirect('/checkout');
   } else {
     this.render("login");
   }
