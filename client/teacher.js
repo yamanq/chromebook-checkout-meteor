@@ -16,7 +16,7 @@ Template.teacher.helpers({
 
 Template.teacher.helpers({
   chromebooks: function() {
-    return Chromebooks.find();
+    return Chromebooks.find({}, {sort: {number: 1}});
   },
   carts: function() {
     return carts.find();
@@ -25,6 +25,8 @@ Template.teacher.helpers({
 Template.teacher.rendered = function() {
 
     $(".tchChromebooks").mCustomScrollbar({
-        theme: 'dark'
+        theme: 'dark',
+        scrollInertia: 0,
+        mouseWheelPixels: 30
     });
 }

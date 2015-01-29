@@ -1,7 +1,6 @@
 Meteor.publish('chromebook', function() {
 
   if (Roles.userIsInRole(this.userId, ['admin'])) {
-
     return Chromebooks.find();
 
   } 

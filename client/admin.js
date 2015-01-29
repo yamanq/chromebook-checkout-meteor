@@ -1,6 +1,6 @@
 Template.admin.helpers({
   chromebooks: function() {
-    return Chromebooks.find();
+    return Chromebooks.find({}, {sort: {number: 1}});
   },
   carts: function() {
     return carts.find();
@@ -36,7 +36,7 @@ Template.admin.events({
       "serial": chromebook_serial,
       "number": chromebook_number
     });
-  
+    
     // Clear form
     $("input[name='anumber']")[0].value = "";
     $("input[name='aserial']")[0].value = "";
@@ -117,6 +117,8 @@ Template.admin.events({
 Template.admin.rendered = function() {
 
     $(".border.tabs-content").mCustomScrollbar({
-        theme: 'dark'
+        theme: 'dark',
+        scrollInertia: 0,
+        mouseWheelPixels: 30
     });
 }

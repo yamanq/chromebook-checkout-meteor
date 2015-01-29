@@ -39,3 +39,4 @@ Template.chromebook.events({
     }
   }
 });
+

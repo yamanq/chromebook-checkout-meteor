@@ -1,6 +1,6 @@
 Template.checkout.helpers({
   chromebooks: function() {
-    return Chromebooks.find();
+    return Chromebooks.find({}, {sort: {number: 1}});
   }
 });
 
@@ -25,6 +25,8 @@ Template.checkout.events({
 Template.checkout.rendered = function() {
 
     $(".chckChromebooks").mCustomScrollbar({
-        theme: 'dark'
+        theme: 'dark',
+        scrollInertia: 0,
+        mouseWheelPixels: 30
     });
 }
