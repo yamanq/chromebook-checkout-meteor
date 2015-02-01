@@ -29,15 +29,15 @@
       <div class="border">
       <div>
           <h6> Edit Carts</h6> <!-- Editing Carts -->
+          {{#momentum plugin='slide-fade'}}
         {{#each carts}}
         <div class="row-admin">
           {{>cart}}
           <i class="icons yieldc fa fa-exclamation-triangle fa-lg"></i>
-          <div class="overlap-fix">
           <i class="icons crossc fa fa-times fa-lg"></i>
-        </div>
        </div>
        {{/each}}
+       {{/momentum}}
       <h6>Add a Cart</h6> <!-- Adding Carts -->
         <form class="new-task">
           <input type="text" name="acnumber" placeholder="Cart Number (ex. A)" class="submission"/>

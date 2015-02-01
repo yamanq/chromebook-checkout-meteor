@@ -8,22 +8,26 @@
           <div class="tchChromebooks">
             <div>
            <div>
+            {{#momentum plugin='slide-fade'}}
               {{#each chromebooks}}
                 <div class="row">
                   {{> chromebook}}
                 </div>
               {{/each}}
+              {{/momentum}}
             </div>
           </div>
         </div>
           <!-- Carts -->
           <div class="tchChromebooks">
             <div>
+            {{#momentum plugin='slide-fade'}}
             {{#each carts}}
               <div class="row">
                 {{>cart}}
               </div>
             {{/each}}
+            {{/momentum}}
           </div>
           </div>
                {{/teacherTabs}}

@@ -16,6 +16,9 @@ Template.cart.helpers({
     } else {
       return moment(this.last_checkout).fromNow();      
     }
+  },
+  url: function() {
+    return Router.current().originalUrl.replace("/", "");
   }
 });
 

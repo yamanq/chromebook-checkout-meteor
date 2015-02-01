@@ -19,6 +19,10 @@ body {
   max-width: 81%;
 }
 
+.checkout, .teacher {
+  min-width: 94%;
+}
+
 .chromebook:hover {
   box-shadow: 5px 0 12px #919191, -5px 0 12px #919191;
   outline: #25abd9 solid 3px;
@@ -36,9 +40,10 @@ body {
   color: #5A5A5A;
   transition: color 0.5s;
 }
-.icons.yield.fa.fa-exclamation-triangle.fa-lg {
+.icons.yield.fa.fa-exclamation-triangle.fa-lg, .icons.yieldc.fa.fa-exclamation-triangle.fa-lg {
   margin-right: 6%;
 }
+
 
 .cross:hover, .crossc:hover{
   color: #E14C2B;
