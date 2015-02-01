@@ -3,21 +3,20 @@
     <div>
     <h5>Admin Panel</h5>
     </div>
-    
           {{#teacherTabs tabs=tabs}}
           <!-- Single -->
       <div class="border">
       <div>
         <h6>Edit Chromebooks</h6> <!-- Edit Chromebooks -->
+          {{#momentum plugin='slide-fade'}}
         {{#each chromebooks}}
           <div class="row-admin">
             {{> chromebook}}
             <i class="icons yield fa fa-exclamation-triangle fa-lg"></i>
-            <div class="overlap-fix">
             <i class="icons cross fa fa-times fa-lg"></i>
-          </div> 
       </div> 
-      {{/each}}
+        {{/each}} 
+      {{/momentum}}
         <h6>Add a Chromebook</h6> <!-- Add Chromebooks -->
         <form class="new-task">
           <input type="text" name="anumber" placeholder="Chromebook Number (eg. B1)" class="submission" />

@@ -6,7 +6,7 @@
   color: #E14C2B;
 }
 .row-admin {
-  max-width:89%;
+  min-width: 100%;
 }
 .submission {
   margin-left: 2%;

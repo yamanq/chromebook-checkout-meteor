@@ -16,8 +16,7 @@ body {
   box-shadow: 3px 3px 10px #c2c2c2;
   color: #000000;
   height: 10%;
-/*  max-width: 100%;*/
-  min-width: 92%;
+  max-width: 81%;
 }
 
 .chromebook:hover {
@@ -32,10 +31,13 @@ body {
 
 .icons {
   float: right;
-  margin-top: 2.5%;
+  margin-top: -7.5%;
   margin-left: 2%;
   color: #5A5A5A;
   transition: color 0.5s;
+}
+.icons.yield.fa.fa-exclamation-triangle.fa-lg {
+  margin-right: 6%;
 }
 
 .cross:hover, .crossc:hover{
