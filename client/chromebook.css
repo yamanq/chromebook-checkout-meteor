@@ -17,6 +17,7 @@ body {
   color: #000000;
   height: 10%;
   max-width: 81%;
+  max-height: 10%;
 }
 
 .checkout, .teacher {

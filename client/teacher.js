@@ -27,7 +27,7 @@ Template.teacher.rendered = function() {
     $(".tchChromebooks").mCustomScrollbar({
         theme: 'dark',
         scrollInertia: 0,
-        mouseWheelPixels: 40,
-        contentTouchScroll: 30
+        mouseWheel: { deltaFactor: 40 },
+        alwaysShowScrollbar: 2
     });
 }

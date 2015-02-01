@@ -119,8 +119,8 @@ Template.admin.rendered = function() {
     $(".border.tabs-content").mCustomScrollbar({
         theme: 'dark',
         scrollInertia: 0,
-        mouseWheelPixels: 40,
-        contentTouchScroll: 30
+        mouseWheel: { deltaFactor: 40 },
+        alwaysShowScrollbar: 2
     });
 
 }
