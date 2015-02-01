@@ -1,14 +1,11 @@
 <template name="cart">
-    <div class="cart chromebook {{status_class}} {{url}}">
-      <p class="pure-u-3-5">Cart {{number}}</p> 
-        {{#if status }}
-          <div class="timestamp pure-u-2-5">
-            <p class="user"> <b>{{user}}</b></p>
-            <p class="time">{{time_ago}}</p>
-          </div>
-          <!-- <div class="cross pure-u-2-5">
-              <i class="fa fa-times"></i>
-          </div> -->
-        {{/if}}
-    </div>
+  <div class="cart chromebook {{status_class}} {{url}}">
+    <p class="pure-u-3-5">Cart {{number}}</p> 
+      {{#if status }}
+        <div class="timestamp pure-u-2-5">
+          <p class="user"> <b>{{user}}</b></p>
+          <p class="time">{{time_ago}}</p>
+        </div>
+      {{/if}}
+  </div>
 </template>

@@ -1,18 +1,18 @@
 <template name="checkout">
-    <div class="main-center">
-    	<div>
-	      <h5>Chromebook Checkout</h5>
-	    </div>
-	     <div class="chckBorder">
-	      <div class="chckChromebooks">
-	      {{#momentum plugin='slide-fade'}}
-	      {{#each chromebooks}}
-	    		<div class="row">
-	        	{{> chromebook}}
-     			</div>
-	      {{/each}}
-	      {{/momentum}}
-	  	  </div>
-	  	</div>
-      </div>
+	<div class="main-center">
+		<div>
+			<h5>Chromebook Checkout</h5>
+		</div>
+		<div class="chckBorder">
+			<div class="chckChromebooks">
+				{{#momentum plugin='slide-fade'}}
+					{{#each chromebooks}}
+						<div class="row">
+							{{> chromebook}}
+						</div>
+					{{/each}}
+				{{/momentum}}
+			</div>
+		</div>
+	</div>
 </template>

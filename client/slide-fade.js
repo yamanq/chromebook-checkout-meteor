@@ -11,6 +11,7 @@ Momentum.registerPlugin('slide-fade', function(options) {
       $node
         .hide()
         .insertBefore(next)
+        .css('height', $node.height())
         .velocity('fadeIn')
         .velocity('slideDown', {
           easing: options.easing,
@@ -31,6 +32,7 @@ Momentum.registerPlugin('slide-fade', function(options) {
         easing: options.easing,
         duration: options.duration,
         complete: function() {
+          $node.velocity('fadeOut');
           $node.remove();
           done();
         }

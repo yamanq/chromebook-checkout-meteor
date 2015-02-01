@@ -1,35 +1,35 @@
 <template name="teacher">
-    <div class="main-center-admin">
+  <div class="main-center-admin">
+    <div>
+    <h5>Chromebook Checkout</h5>
+    </div>
+  {{#teacherTabs tabs=tabs}}
+    <!-- Single -->
+    <div class="tchChromebooks">
       <div>
-      <h5>Chromebook Checkout</h5>
-      </div>
-              {{#teacherTabs tabs=tabs}}
-          <!-- Single -->
-          <div class="tchChromebooks">
-            <div>
-           <div>
-            {{#momentum plugin='slide-fade'}}
-              {{#each chromebooks}}
-                <div class="row">
-                  {{> chromebook}}
-                </div>
-              {{/each}}
-              {{/momentum}}
-            </div>
-          </div>
-        </div>
-          <!-- Carts -->
-          <div class="tchChromebooks">
-            <div>
-            {{#momentum plugin='slide-fade'}}
-            {{#each carts}}
+        <div>
+          {{#momentum plugin='slide-fade'}}
+            {{#each chromebooks}}
               <div class="row">
-                {{>cart}}
+                {{> chromebook}}
               </div>
             {{/each}}
-            {{/momentum}}
-          </div>
-          </div>
-               {{/teacherTabs}}
+          {{/momentum}}
         </div>
+      </div>
+    </div>
+    <!-- Carts -->
+    <div class="tchChromebooks">
+      <div>
+        {{#momentum plugin='slide-fade'}}
+          {{#each carts}}
+           <div class="row">
+            {{> cart}}
+           </div>
+          {{/each}}
+        {{/momentum}}
+      </div>
+    </div>
+  {{/teacherTabs}}
+  </div>
 </template>

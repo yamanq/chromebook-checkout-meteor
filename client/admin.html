@@ -3,48 +3,48 @@
     <div>
     <h5>Admin Panel</h5>
     </div>
-          {{#teacherTabs tabs=tabs}}
+    {{#teacherTabs tabs=tabs}}
           <!-- Single -->
-      <div class="border">
+    <div class="border">
       <div>
         <h6>Edit Chromebooks</h6> <!-- Edit Chromebooks -->
           {{#momentum plugin='slide-fade'}}
-        {{#each chromebooks}}
-          <div class="row-admin">
-            {{> chromebook}}
-            <i class="icons yield fa fa-exclamation-triangle fa-lg"></i>
-            <i class="icons cross fa fa-times fa-lg"></i>
-      </div> 
-        {{/each}} 
-      {{/momentum}}
+            {{#each chromebooks}}
+              <div class="row-admin">
+                {{> chromebook}}
+                <i class="icons yield fa fa-exclamation-triangle fa-lg"></i>
+                <i class="icons cross fa fa-times fa-lg"></i>
+              </div> 
+            {{/each}} 
+          {{/momentum}}
         <h6>Add a Chromebook</h6> <!-- Add Chromebooks -->
         <form class="new-task">
           <input type="text" name="anumber" placeholder="Chromebook Number (eg. B1)" class="submission" />
           <input type="text" name="aserial" placeholder="Serial Number (eg. ABCD1234)" class="submission"/>
           <input type="submit" value="Submit" class="add" />
         </form>
-    </div>
+      </div>
     </div>
           <!-- Carts -->
-      <div class="border">
+    <div class="border">
       <div>
-          <h6> Edit Carts</h6> <!-- Editing Carts -->
+        <h6> Edit Carts</h6> <!-- Edit Carts -->
           {{#momentum plugin='slide-fade'}}
-        {{#each carts}}
-        <div class="row-admin">
-          {{>cart}}
-          <i class="icons yieldc fa fa-exclamation-triangle fa-lg"></i>
-          <i class="icons crossc fa fa-times fa-lg"></i>
-       </div>
-       {{/each}}
-       {{/momentum}}
-      <h6>Add a Cart</h6> <!-- Adding Carts -->
+            {{#each carts}}
+              <div class="row-admin">
+                {{>cart}}
+                <i class="icons yieldc fa fa-exclamation-triangle fa-lg"></i>
+                <i class="icons crossc fa fa-times fa-lg"></i>
+             </div>
+            {{/each}}
+         {{/momentum}}
+        <h6>Add a Cart</h6> <!-- Adding Carts -->
         <form class="new-task">
           <input type="text" name="acnumber" placeholder="Cart Number (ex. A)" class="submission"/>
           <input type="submit" value="Submit" class="add, addc" />
         </form>
+      </div>
     </div>
-    </div>
-        {{/teacherTabs}}
+    {{/teacherTabs}}
   </div>
 </template> 

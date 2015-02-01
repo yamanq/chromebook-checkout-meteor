@@ -26,6 +26,21 @@ Template.admin.events({
 
     var chromebook_number = $("input[name='anumber']")[0].value;
     var chromebook_serial = $("input[name='aserial']")[0].value;
+    var currNumbers = Chromebooks.find({ number: chromebook_number }).fetch();
+    var currSerials = Chromebooks.find({ serial: chromebook_serial }).fetch();
+    
+    if(currNumbers.length !== 0) {
+      alert("That Chromebook already exists!");
+      $("input[name='anumber']")[0].value = "";
+      $("input[name='anumber']")[0].focus();
+      throw new Error("That Chromebook already exists!");
+    }
+    if(currSerials.length !== 0) {
+      alert("That serial number already exists!");
+       $("input[name='aserial']")[0].value = "";
+        $("input[name='aserial']").focus();
+      throw new Error("That serial number already exists!");  
+    }
 
     if (!((chromebook_number === "") || (chromebook_serial === "")))
 
