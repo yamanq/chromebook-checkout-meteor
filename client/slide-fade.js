@@ -26,8 +26,20 @@ Momentum.registerPlugin('slide-fade', function(options) {
       var $node = $(node);
 
       $node
-      .velocity('fadeOut');
+      .velocity('fadeOut')
+      .velocity('slideUp', {
+        easing: options.easing,
+        duration: options.duration,
+        complete: function() {
+          $node.remove();
+          done();
+        }
+      });
       
-}
-}
+    
+
+
+
+     }
+  } 
 });
