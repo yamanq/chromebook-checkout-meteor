@@ -1,4 +1,4 @@
-Router.route('/', function() {
+ Router.route('/', function() {
   this.render("initial");
 })
 
@@ -15,12 +15,13 @@ Router.route('/login', function() {
     this.redirect('/teacher');
   } else if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
     this.redirect('/admin');
-  } else if (Roles.userIsInRole(Meteor.userId(), ['admin', 'teacher'])) {
-    this.redirect('/admin'); 
-  } else if (Meteor.user()) {
-    this.redirect('/checkout');
   } else {
-    this.render("login");
+        if (Meteor.loggingIn()) {
+          Router.redirect('/login')
+      }
+      else {
+        this.redirect('/checkout');
+      };
   }
 });
 
@@ -36,6 +37,6 @@ Router.route('/teacher', function() {
   if (Roles.userIsInRole(Meteor.userId(), ['admin', 'teacher'])) {
     this.render("teacher");
   } else {
-       this.redirect('/login');
+    this.redirect('/login');
   }
 });
