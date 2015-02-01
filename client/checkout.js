@@ -27,6 +27,7 @@ Template.checkout.rendered = function() {
     $(".chckChromebooks").mCustomScrollbar({
         theme: 'dark',
         scrollInertia: 0,
-        mouseWheelPixels: 30
+        mouseWheelPixels: 40,
+        contentTouchScroll: 30
     });
 }

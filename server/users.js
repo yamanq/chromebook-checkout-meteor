@@ -15,11 +15,11 @@ Meteor.publish('carts', function() {
 });
 
 var adminusers = [
-  "ybq987@gmail.com",
   "mminer@bloomfield.org",
   "qalieh.yaman90@bloomfield.org",
   "ksjdragon@gmail.com",
-  "chthomas@bloomfield.org"
+  "chthomas@bloomfield.org",
+  "ybq987@gmail.com"
 ];
 for (var i = 0; i < adminusers.length; i++) {
   var adminuser = adminusers[i];

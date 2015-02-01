@@ -29,7 +29,7 @@ Template.admin.events({
 
     if (!((chromebook_number === "") || (chromebook_serial === "")))
 
-    Chromebooks.insert({
+     Chromebooks.insert({
       "status": 0,
       "userid": null,
       "last_checkout": null,
@@ -119,6 +119,8 @@ Template.admin.rendered = function() {
     $(".border.tabs-content").mCustomScrollbar({
         theme: 'dark',
         scrollInertia: 0,
-        mouseWheelPixels: 30
+        mouseWheelPixels: 40,
+        contentTouchScroll: 30
     });
+
 }
