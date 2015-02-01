@@ -68,7 +68,7 @@ h6 {
   padding-bottom:.5%;
 }
 .row, .row-admin {
-  height: 10%;
+  max-height: 10%;
   display: flex;
 }
 /* End */
