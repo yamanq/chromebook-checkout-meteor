@@ -3,9 +3,13 @@ carts.allow({
   insert: function (userId, doc) {
     return Roles.userIsInRole(userId, ['admin']);
   },
-  update: userId,
+  update: function (userId, doc) {
+    return (userId != null);
+  },
   remove: function (userId, doc) {
     return Roles.userIsInRole(userId, ['admin']);
   },
-  fetch: userId
+  fetch: function (userId, doc) {
+    return (userId != null);
+  }
 });
