@@ -16,7 +16,7 @@ Meteor.publish('carts', function() {
   }
 });
 
-Posts.permit(['insert', 'update', 'remove']).never().apply();
+Chromebooks.permit(['insert', 'update', 'remove']).never().apply();
 var adminusers = [
   //Add all Users here
   "mminer@bloomfield.org",
