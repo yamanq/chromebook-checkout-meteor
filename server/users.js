@@ -11,10 +11,14 @@ Meteor.publish('chromebook', function() {
 });
 
 Meteor.publish('carts', function() {
-  return carts.find();
+  if (Roles.userIsInRole(this.userId, ['admin', 'teacher'])) {
+    return carts.find();
+  }
 });
 
+Posts.permit(['insert', 'update', 'remove']).never();
 var adminusers = [
+  //Add all Users here
   "mminer@bloomfield.org",
   "qalieh.yaman90@bloomfield.org",
   "ksjdragon@gmail.com",
