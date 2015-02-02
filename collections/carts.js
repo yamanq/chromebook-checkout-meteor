@@ -4,7 +4,7 @@ carts.allow({
     return Roles.userIsInRole(userId, ['admin']);
   },
   update: function (userId, doc) {
-    return (userId != null);
+    return Roles.userIsInRole(userId, ['admin', 'teacher'];
   },
   remove: function (userId, doc) {
     return Roles.userIsInRole(userId, ['admin']);
