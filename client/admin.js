@@ -37,8 +37,8 @@ Template.admin.events({
     }
     if(currSerials.length !== 0) {
       alert("That serial number already exists!");
-       $("input[name='aserial']")[0].value = "";
-        $("input[name='aserial']").focus();
+      $("input[name='aserial']")[0].value = "";
+      $("input[name='aserial']").focus();
       throw new Error("That serial number already exists!");  
     }
 
@@ -63,6 +63,14 @@ Template.admin.events({
     event.preventDefault();
 
     var cart_number = $("input[name='acnumber']")[0].value;
+    var currCName = carts.find({ number: cart_number }).fetch()
+
+    if(currCName.length !== 0) {
+      alert("That cart already exists!");
+      $("input[name='acnumber']")[0].value = "";
+      $("input[name='acnumber']").focus();
+      throw new Error("That cart already exists!");
+    }
 
     if (!((cart_number === "")))
 

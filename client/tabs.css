@@ -8,20 +8,27 @@
   font-weight: 600;
   font-size: 13px;
   float: left;
-  padding: 13px 23.18%;
-  margin: 0;
+  padding: 13px 23.24%;
+  border-bottom: 5px solid #ddd;
   list-style: none;
   cursor: pointer;
   margin-bottom:3%;
+  transition: background-color 0.4s;
+  transition: border-bottom 0.4s  
 }
 .tab-item.active {
-  border-radius: top 5px;
-  border: 1px solid #ddd;
-  border-bottom: none;
+  border-bottom: 5px solid #E14C2B;
   margin-bottom: -1px !important;
-  padding: 13px 23.15% 14px 23.15% !important;
+  box-shadow: inset 1px 1px 1px #ddd;
   background-color: #fff;
-  color: #333;
+}
+.tab-item:hover {
+  background-color: rgba(212, 212, 212, .7);
+  border-bottom: 5px solid rgba(225, 76, 43, .5);
+}
+.tab-item.active:hover {
+  border-bottom: 5px solid #E14C2B;
+  background-color: #fff;
 }
 .tabs-content-container {
   padding: 4.2% 15px 15px 15px;
