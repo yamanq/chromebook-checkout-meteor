@@ -13,8 +13,8 @@
   list-style: none;
   cursor: pointer;
   margin-bottom:3%;
-  transition: background-color 0.4s;
-  transition: border-bottom 0.4s  
+  transition: background-color 1s;
+  transition: border-bottom 1s  
 }
 .tab-item.active {
   border-bottom: 5px solid #E14C2B;
