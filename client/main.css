@@ -69,6 +69,6 @@ h6 {
 }
 .row, .row-admin {
   max-height: 10%;
-  display: flex;
+  display: flex !important;
 }
 /* End */

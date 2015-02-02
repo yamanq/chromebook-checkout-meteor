@@ -18,6 +18,8 @@ body {
   height: 10%;
   max-width: 81%;
   max-height: 10%;
+  max-height: 70px;
+  min-width: 79%;
 }
 
 .checkout, .teacher {
@@ -36,13 +38,13 @@ body {
 
 .icons {
   float: right;
-  margin-top: -7.5%;
+  margin-top: 3%;
   margin-left: 2%;
   color: #5A5A5A;
   transition: color 0.5s;
 }
-.icons.yield.fa.fa-exclamation-triangle.fa-lg, .icons.yieldc.fa.fa-exclamation-triangle.fa-lg {
-  margin-right: 6%;
+.yield {
+  margin-right: 2%;
 }
 
 
