@@ -7,7 +7,7 @@ Template.checkout.rendered = function() {
 
     $(".chckChromebooks").mCustomScrollbar({
         theme: 'dark',
-        scrollInertia: 0,
+        scrollInertia: 10,
         mouseWheel: { deltaFactor: 40 },
         alwaysShowScrollbar: 2
     });
