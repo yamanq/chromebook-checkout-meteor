@@ -9,7 +9,5 @@ Chromebooks.allow({
   remove: function (userId, doc) {
     return Roles.userIsInRole(userId, ['admin']);
   },
-  fetch: function (userId, doc) {
-    return (userId != null);
-  }
+  fetch: []
 });
