@@ -3,7 +3,7 @@
 })
 
 Router.route('/checkout', function() {
-  if (Meteor.user()._id != null) {
+  if (Meteor.user() != null) {
     this.render("checkout");
   } else {
     this.redirect('/login');
@@ -11,15 +11,16 @@ Router.route('/checkout', function() {
 });
 
 Router.route('/login', function() {
-  if (Roles.userIsInRole(Meteor.user()._id, ['admin'])) {
+  if (Meteor.user() == null) {
+    this.render("login");
+  } else if (Roles.userIsInRole(Meteor.user()._id, ['admin'])) {
     this.redirect('/admin');
   } else if (Roles.userIsInRole(Meteor.user()._id, ['teacher'])) {
     this.redirect('/teacher');
-  } else if (Meteor.user()._id != null) {
+  } else if (Meteor.user() != null) {
     this.redirect('/checkout');
-  }
-  else {
-    this.render('login')
+  } else {
+    this.redirect('')
   }
 });
 
