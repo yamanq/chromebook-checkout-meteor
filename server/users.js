@@ -1,3 +1,9 @@
+if (Meteor.isClient) {
+
+Chromebooks.permit(['insert', 'update', 'remove']).never().apply();
+carts.permit(['insert', 'update', 'remove']).never().apply();
+};
+
 Meteor.publish('chromebook', function() {
 
   if (Roles.userIsInRole(this.userId, ['admin'])) {
@@ -16,18 +22,8 @@ Meteor.publish('carts', function() {
   }
 });
 
-Chromebooks.permit(['insert', 'update', 'remove']).ifHasRole('admin').apply();
-carts.permit(['insert', 'update', 'remove']).ifHasRole(['admin', 'teacher']).apply();
-
-
-
-/*if ( Check if Meteor.userId() != Current logged in user Meteor.userId if they update hack way ) {
-  Chromebooks.update
-}
-*/
-
 var adminusers = [
-  //Add all Users here
+  //Add all Admins here
   "mminer@bloomfield.org",
   "qalieh.yaman90@bloomfield.org",
   "ksjdragon@gmail.com",

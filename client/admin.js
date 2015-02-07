@@ -21,119 +21,34 @@ ReactiveTabs.createInterface({
 });
 
 Template.admin.events({
-  "submit .add, click .add": function (event) {
-    event.preventDefault();
-
-    var chromebook_number = $("input[name='anumber']")[0].value;
-    var chromebook_serial = $("input[name='aserial']")[0].value;
-    var currNumbers = Chromebooks.find({ number: chromebook_number }).fetch();
-    var currSerials = Chromebooks.find({ serial: chromebook_serial }).fetch();
-
-    if(currNumbers.length !== 0) {
-      alert("That Chromebook already exists!");
-      $("input[name='anumber']")[0].value = "";
-      $("input[name='anumber']")[0].focus();
-      throw new Error("That Chromebook already exists!");
-    }
-    if(currSerials.length !== 0) {
-      alert("That serial number already exists!");
-      $("input[name='aserial']")[0].value = "";
-      $("input[name='aserial']").focus();
-      throw new Error("That serial number already exists!");  
-    }
-
-    if (!((chromebook_number === "") || (chromebook_serial === "")))
-
-     Chromebooks.insert({
-      "status": 0,
-      "userid": null,
-      "last_checkout": null,
-      "serial": chromebook_serial,
-      "number": chromebook_number
-    });
-    // Clear form
+  "submit .add, click .add": function () {
+    Meteor.call('addchromebook', $("input[name='anumber']")[0].value, $("input[name='aserial']")[0].value);
     $("input[name='anumber']")[0].value = "";
     $("input[name='aserial']")[0].value = "";
-    $("input[name='anumber']").focus();
-
-    // Prevent default form
+    $("input[name='anumber']")[0].focus();
     return false;
   },
+
   "submit .addc, click .addc": function (event) {
-    event.preventDefault();
-
-    var cart_number = $("input[name='acnumber']")[0].value;
-    var currCName = carts.find({ number: cart_number }).fetch()
-
-    if(currCName.length !== 0) {
-      alert("That cart already exists!");
-      $("input[name='acnumber']")[0].value = "";
-      $("input[name='acnumber']").focus();
-      throw new Error("That cart already exists!");
-    }
-
-    if (!((cart_number === "")))
-
-    carts.insert({
-      "status": 0,
-      "userid": null,
-      "last_checkout": null,
-      "number": cart_number
-    });
-
-    // Clear form
+    Meteor.call('addcart', $("input[name='acnumber']")[0].value);
     $("input[name='acnumber']")[0].value = "";
-
-    // Prevent default form
     return false;
   },
+
   'click .cross' : function() {
-    if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
-      Chromebooks.remove(this._id);
-    }
+    Meteor.call('removechromebook', this);
   },
+
   'click .crossc' : function() {
-    if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
-      carts.remove(this._id);
-    }
+    Meteor.call('removecart', this);
   },
+
   'click .yieldc' : function() {
-    if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
-      if (this.status === 0) {
-        carts.update(this._id, {$set: {status: 2}});
-      }
-      else if (this.status === 1) {
-        carts.update(this._id, {$set: {status: 2}});
-      }
-      else {
-        carts.update(this._id, {$set: {status: 0}});
-        carts.update(this._id, {$set: {last_checkout: null}});
-        carts.update(this._id, {$set: {userid: null}});
-        carts.update(this._id, {$set: {user: null}});
-      }
-    }
-    else {
-      alert("Access Denied");
-    }
+    Meteor.call('yieldcart', this);
   },
+  
   'click .yield' : function() {
-    if (Roles.userIsInRole(Meteor.userId(), ['admin'])) {
-      if (this.status === 0) {
-        Chromebooks.update(this._id, {$set: {status: 2}});
-        Chromebooks.update(this._id, {$set: {user: null}});
-      }
-      else if (this.status ===1) {
-        Chromebooks.update(this._id, {$set: {status: 2}});
-      }
-      else {
-        Chromebooks.update(this._id, {$set: {status: 0}});
-        Chromebooks.update(this._id, {$set: {last_checkout: null}});
-        Chromebooks.update(this._id, {$set: {userid: null}});
-      }
-    }
-    else {
-      alert("Access Denied");
-    }
+    Meteor.call('yieldchromebook', this);
   }
 });
 
