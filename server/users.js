@@ -16,7 +16,16 @@ Meteor.publish('carts', function() {
   }
 });
 
-Chromebooks.permit(['insert', 'update', 'remove']).never().apply();
+Chromebooks.permit(['insert', 'update', 'remove']).ifHasRole('admin').apply();
+carts.permit(['insert', 'update', 'remove']).ifHasRole(['admin', 'teacher']).apply();
+
+
+
+/*if ( Check if Meteor.userId() != Current logged in user Meteor.userId if they update hack way ) {
+  Chromebooks.update
+}
+*/
+
 var adminusers = [
   //Add all Users here
   "mminer@bloomfield.org",
@@ -78,3 +87,5 @@ Meteor.methods({
     Roles.setUserRoles(targetUserId, roles, group)
   }
 })
+
+
