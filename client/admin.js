@@ -52,12 +52,3 @@ Template.admin.events({
   }
 });
 
-Template.admin.rendered = function() {
-
-    $(".border.tabs-content").mCustomScrollbar({
-        theme: 'dark',
-        scrollInertia: 10,
-        mouseWheel: { deltaFactor: 30 },
-        alwaysShowScrollbar: 2
-    });
-}

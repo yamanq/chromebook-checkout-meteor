@@ -1,12 +1,7 @@
-body {
-  -webkit-user-select: none;
-}
-
 .pure-u-3-5 {
   margin-top: 1.5%;
   margin-bottom: 1.5%;
 }
-
 .chromebook {
   font-family: Lato;
   padding-left:2%;
@@ -16,42 +11,39 @@ body {
   box-shadow: 3px 3px 10px #c2c2c2;
   color: #000000;
   height: 10%;
-  max-width: 81%;
   max-height: 10%;
   max-height: 70px;
-  min-width: 79%;
 }
-
-.checkout, .teacher {
-  min-width: 94%;
+.checkout {
+  min-width: 760px;
+  max-width: 760px;
 }
-
+.teacher {
+  min-width: 805px;
+  max-width: 805px;
+}
+.admin {
+  max-width: 700px;
+  min-width: 700px;
+}
 .chromebook:hover {
   box-shadow: 5px 0 12px #919191, -5px 0 12px #919191;
   outline: #25abd9 solid 3px;
 }
-
 .timestamp {
   color: #6D6E6D;
   float: right;
 }
-
 .icons {
   float: right;
-  margin-top: 3%;
-  margin-left: 2%;
+  margin-top: 27px;
+  margin-left: 17px;
   color: #5A5A5A;
   transition: color 0.5s;
 }
-.yield {
-  margin-right: 2%;
-}
-
-
-.cross:hover, .crossc:hover{
+.cross:hover, .yield:hover {
   color: #E14C2B;
 }
-
 .user {
   font-size: 65%;
   margin-top: 2%;
@@ -69,22 +61,18 @@ body {
   margin-bottom: 0%;
   transition: color 0.5s;
 }
-
 .available {
   background-color:#72D376;
   transition: background-color 1s;
 }
-
 .checkedout {
   background-color:#F9DB45;
   transition: background-color 1s;
 }
-
 .unavailable {
   background-color:#E14C2B;
   transition: background-color 1s;
 }
-
 .unavailable .user, .unavailable .time {
   color: white;
 }

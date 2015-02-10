@@ -1,6 +1,3 @@
-.yield:hover, .yieldc:hover {
-  color: #E14C2B;
-}
 .row-admin {
   min-width: 100%;
 }
@@ -11,7 +8,7 @@
   margin-top: 0%;
   font-size: 14pt;
 }
-.add, .addc {
+.add {
   background: #d94158;
   background-image: -webkit-linear-gradient(top, #d94158, #ad3838);
   background-image: -moz-linear-gradient(top, #d94158, #ad3838);
@@ -27,7 +24,7 @@
   width: 97%;
   font-size: 18pt;
 }
-.add:hover, .addc:hover {
+.add:hover {
   background: #db6b6b;
   background-image: -webkit-linear-gradient(top, #db6b6b, #d64949);
   background-image: -moz-linear-gradient(top, #db6b6b, #d64949);
@@ -35,20 +32,4 @@
   background-image: -o-linear-gradient(top, #db6b6b, #d64949);
   background-image: linear-gradient(to bottom, #db6b6b, #d64949);
   text-decoration: none;
-}
-.border {
-  padding: 1% 0px 1% 15px;
-  overflow:auto;
-  min-width:700px;
- }
-.remove {
-  margin-bottom: 4%;
-}
-
-.yield:hover {
-  color: #E14C2B;
-}
-
-.row {
-  min-width: 80%;
 }

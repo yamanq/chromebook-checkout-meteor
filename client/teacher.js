@@ -11,10 +11,7 @@ Template.teacher.helpers({
       { name: 'Single', slug: 'single' },
       { name: 'Carts', slug: 'carts' }
    		 ];
-	}
-});
-
-Template.teacher.helpers({
+	},
   chromebooks: function() {
     return Chromebooks.find({}, {sort: {number: 1}});
   },
@@ -22,12 +19,3 @@ Template.teacher.helpers({
     return carts.find();
   }
 });
-Template.teacher.rendered = function() {
-
-    $(".tchChromebooks").mCustomScrollbar({
-        theme: 'dark',
-        scrollInertia: 10,
-        mouseWheel: { deltaFactor: 30 },
-        alwaysShowScrollbar: 2
-    });
-}

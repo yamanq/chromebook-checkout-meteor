@@ -17,8 +17,8 @@ Template.chromebook.helpers({
       return moment(this.last_checkout).fromNow();      
     }
   },
-  url: function() {
-    return window.location.href.replace("http://cbook.meteor.com/", "");
+  page: function() {
+    return Router.current().route.path().replace("/", "");
   }
 });
 

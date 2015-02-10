@@ -26,15 +26,15 @@
   background-color: rgba(212, 212, 212, .7);
   border-bottom: 5px solid rgba(225, 76, 43, .5);
 }
-.tab-item.active:hover {
-  border-bottom: 5px solid #E14C2B;
-  background-color: #fff;
-}
 .tabs-content-container {
   padding: 4.2% 15px 15px 15px;
 }
 .tabs-content {
-overflow: auto;
-min-height: 425px;
-max-height: 425px;
+  min-height: 425px;
+  max-height: 425px;
+  min-width: 875px;
+  max-width: 875px;
+  padding: 1% 80% 1% 0px;
+  margin-right: -80% !important;
+  overflow: auto;
 }

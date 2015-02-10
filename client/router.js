@@ -39,3 +39,6 @@ Router.route('/teacher', function() {
     this.redirect('/login');
   }
 });
+Router.plugin('dataNotFound', function() {
+  this.redirect('/')
+});
