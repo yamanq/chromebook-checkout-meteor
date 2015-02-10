@@ -22,7 +22,7 @@ Router.route('/login', function() {
   } else {
     this.redirect('')
   }
-});
+}); 
 
 Router.route('/admin', function() {
   if (Roles.userIsInRole(Meteor.user()._id, ['admin'])) {
@@ -39,6 +39,6 @@ Router.route('/teacher', function() {
     this.redirect('/login');
   }
 });
-Router.plugin('dataNotFound', function() {
-  this.redirect('/')
+Router.configure({
+  notFoundTemplate: "initial"
 });
