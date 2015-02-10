@@ -10,10 +10,12 @@ Meteor.publish('chromebook', function() {
     return Chromebooks.find();
 
   } 
-  else {
+  else if (Meteor.user()) {
     return Chromebooks.find({}, {fields: {number: 1, status: 1, userid: 1, last_checkout: 1, user: 1}});
-
+  } else {
+    return null;
   }
+
 });
 
 Meteor.publish('carts', function() {
